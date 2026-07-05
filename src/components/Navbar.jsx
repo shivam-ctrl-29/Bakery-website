@@ -32,7 +32,7 @@ export default function Navbar() {
         transition: 'box-shadow 0.4s',
       }}
     >
-      <div style={{ maxWidth: 1320, margin: '0 auto', padding: '0 48px', height: 76, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 32 }}>
+      <div style={{ maxWidth: 1320, margin: '0 auto', padding: '0 48px 0 28px', height: 76, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 32 }}>
 
         {/* Logo */}
         <Link
