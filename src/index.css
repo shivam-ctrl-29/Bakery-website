@@ -71,6 +71,17 @@ html { scroll-behavior: smooth; }
 ::-webkit-scrollbar-track { background: #FBFAF6; }
 ::-webkit-scrollbar-thumb { background: #C9B89A; border-radius: 2px; }
 
+/* ── NAVBAR RESPONSIVE ── */
+.nav-desktop { display: flex; }
+.nav-mobile-btn { display: none; }
+.nav-mobile-menu { display: none !important; }
+
+@media (max-width: 767px) {
+  .nav-desktop { display: none !important; }
+  .nav-mobile-btn { display: block !important; }
+  .nav-mobile-menu { display: block !important; }
+}
+
 /* ── RESPONSIVE ── */
 @media (max-width: 767px) {
   .r-pad  { padding-left: 20px !important; padding-right: 20px !important; }

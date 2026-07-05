@@ -43,7 +43,7 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop nav */}
-        <nav style={{ display: 'flex', alignItems: 'center', gap: 40 }} className="hidden md:flex">
+        <nav style={{ alignItems: 'center', gap: 40 }} className="nav-desktop">
           {links.map((link) => (
             <NavLink
               key={link.to}
@@ -75,7 +75,7 @@ export default function Navbar() {
           href="https://wa.me/919039978297"
           target="_blank"
           rel="noopener noreferrer"
-          className="hidden md:block"
+          className="nav-desktop"
           style={{ fontSize: 11, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#FBFAF6', background: '#16120D', padding: '13px 26px', textDecoration: 'none', transition: 'background 0.3s' }}
           onMouseEnter={e => e.currentTarget.style.background = '#A07C4F'}
           onMouseLeave={e => e.currentTarget.style.background = '#16120D'}
@@ -85,7 +85,7 @@ export default function Navbar() {
 
         {/* Hamburger */}
         <button
-          className="md:hidden"
+          className="nav-mobile-btn"
           onClick={() => setOpen(!open)}
           aria-label="Toggle menu"
           style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 8 }}
@@ -100,7 +100,7 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       <div
-        className="md:hidden"
+        className="nav-mobile-menu"
         style={{ overflow: 'hidden', maxHeight: open ? 280 : 0, opacity: open ? 1 : 0, transition: 'max-height 0.4s cubic-bezier(0.22,1,0.36,1), opacity 0.3s' }}
       >
         <div style={{ borderTop: '1px solid #E7E1D4', background: 'rgba(251,250,246,0.98)', padding: '20px 32px 24px', display: 'flex', flexDirection: 'column', gap: 4 }}>
