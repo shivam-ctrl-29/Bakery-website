@@ -17,13 +17,11 @@ export default function About() {
     <main className="page-in" style={{ flex: 1 }}>
 
       {/* ── HERO — contained split with framed photo ── */}
-      <section style={{ maxWidth: 1380, margin: '0 auto', padding: '80px 48px 0', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 80, alignItems: 'center' }}>
+      <section className="r-pad r-grid-1" style={{ maxWidth: 1380, margin: '0 auto', padding: '80px 48px 0', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 80, alignItems: 'center' }}>
 
         {/* Left — square framed photo */}
         <div style={{ position: 'relative' }}>
-          {/* Offset decorative frame */}
-          <div style={{ position: 'absolute', top: 16, left: 16, right: -16, bottom: -16, border: '1px solid #C9B89A', zIndex: 0 }} />
-          {/* Square photo */}
+          <div className="about-frame-offset" style={{ position: 'absolute', top: 16, left: 16, right: -16, bottom: -16, border: '1px solid #C9B89A', zIndex: 0 }} />
           <div style={{ position: 'relative', aspectRatio: '1/1', overflow: 'hidden', background: '#1A1410', zIndex: 1 }}>
             <img
               src={founder}
@@ -47,16 +45,17 @@ export default function About() {
           ref={heroRef}
           style={{
             display: 'flex', flexDirection: 'column', justifyContent: 'center',
+            paddingBottom: 32,
             opacity: heroVisible ? 1 : 0,
             transform: heroVisible ? 'translateY(0)' : 'translateY(28px)',
             transition: 'opacity 0.85s cubic-bezier(0.22,1,0.36,1), transform 0.85s cubic-bezier(0.22,1,0.36,1)',
           }}
         >
-          <p style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: 10.5, letterSpacing: '0.28em', textTransform: 'uppercase', color: '#A07C4F', margin: '0 0 40px' }}>( OUR STORY )</p>
-          <h1 style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 400, fontSize: 'clamp(44px, 5vw, 76px)', lineHeight: 1.05, letterSpacing: '-0.015em', margin: '0 0 36px' }}>
+          <p style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: 10.5, letterSpacing: '0.28em', textTransform: 'uppercase', color: '#A07C4F', margin: '0 0 36px' }}>( OUR STORY )</p>
+          <h1 style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 400, fontSize: 'clamp(38px, 5vw, 76px)', lineHeight: 1.05, letterSpacing: '-0.015em', margin: '0 0 32px' }}>
             Made at home.<br /><em style={{ color: '#A07C4F' }}>Made with intent.</em>
           </h1>
-          <div style={{ width: 36, height: 1, background: '#C9B89A', margin: '0 0 36px' }} />
+          <div style={{ width: 36, height: 1, background: '#C9B89A', margin: '0 0 32px' }} />
           <p style={{ fontSize: 14.5, lineHeight: 1.95, color: '#8B8071', maxWidth: 400, margin: 0 }}>
             Billmix began in 2024 with a simple conviction — that baking without eggs should mean compromising on nothing. Every piece is made fresh in a home kitchen in Sukhliya, Indore. No factory. No shortcuts.
           </p>
@@ -64,9 +63,10 @@ export default function About() {
       </section>
 
       {/* ── FOUNDER STORY ── */}
-      <section style={{ maxWidth: 1100, margin: '0 auto', padding: '110px 48px' }}>
+      <section className="r-pad" style={{ maxWidth: 1100, margin: '0 auto', padding: '100px 48px' }}>
         <div
           ref={storyRef}
+          className="r-grid-1"
           style={{
             display: 'grid',
             gridTemplateColumns: '1fr 2fr',
@@ -77,7 +77,7 @@ export default function About() {
           }}
         >
           <div>
-            <blockquote style={{ fontFamily: "'Cormorant Garamond', serif", fontStyle: 'italic', fontSize: 27, lineHeight: 1.5, margin: '0 0 28px' }}>
+            <blockquote style={{ fontFamily: "'Cormorant Garamond', serif", fontStyle: 'italic', fontSize: 'clamp(20px, 2.2vw, 27px)', lineHeight: 1.5, margin: '0 0 24px' }}>
               "I make food that people genuinely enjoy eating."
             </blockquote>
             <div style={{ width: 28, height: 1, background: '#A07C4F', marginBottom: 14 }} />
@@ -103,30 +103,31 @@ export default function About() {
       <section style={{ background: '#16120D' }}>
         <div
           ref={valRef}
+          className="r-pad"
           style={{
             maxWidth: 1320,
             margin: '0 auto',
-            padding: '110px 48px',
+            padding: '100px 48px',
             opacity: valVisible ? 1 : 0,
             transform: valVisible ? 'translateY(0)' : 'translateY(28px)',
             transition: 'opacity 0.85s cubic-bezier(0.22,1,0.36,1), transform 0.85s cubic-bezier(0.22,1,0.36,1)',
           }}
         >
-          <p style={{ fontSize: 11, letterSpacing: '0.3em', textTransform: 'uppercase', color: '#A07C4F', margin: '0 0 64px' }}>What we stand for</p>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 56 }}>
+          <p style={{ fontSize: 11, letterSpacing: '0.3em', textTransform: 'uppercase', color: '#A07C4F', margin: '0 0 56px' }}>What we stand for</p>
+          <div className="r-grid-1" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 48 }}>
             {values.map(({ num, title, desc }, i) => (
               <div
                 key={num}
                 style={{
                   borderTop: '1px solid rgba(251,250,246,0.14)',
-                  paddingTop: 32,
+                  paddingTop: 28,
                   opacity: valVisible ? 1 : 0,
                   transform: valVisible ? 'translateY(0)' : 'translateY(24px)',
                   transition: `opacity 0.85s cubic-bezier(0.22,1,0.36,1) ${i * 120}ms, transform 0.85s cubic-bezier(0.22,1,0.36,1) ${i * 120}ms`,
                 }}
               >
-                <p style={{ fontSize: 11, letterSpacing: '0.24em', color: '#A07C4F', margin: '0 0 24px' }}>{num}</p>
-                <p style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: 25, color: '#FBFAF6', margin: '0 0 14px', lineHeight: 1.15 }}>{title}</p>
+                <p style={{ fontSize: 11, letterSpacing: '0.24em', color: '#A07C4F', margin: '0 0 20px' }}>{num}</p>
+                <p style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: 'clamp(20px, 2vw, 25px)', color: '#FBFAF6', margin: '0 0 12px', lineHeight: 1.15 }}>{title}</p>
                 <p style={{ fontSize: 13, lineHeight: 1.8, color: '#948A7B', margin: 0 }}>{desc}</p>
               </div>
             ))}
@@ -137,21 +138,22 @@ export default function About() {
       {/* ── CTA ── */}
       <section
         ref={ctaRef}
+        className="r-pad r-stack"
         style={{
           maxWidth: 1320,
           margin: '0 auto',
-          padding: '90px 48px',
+          padding: '80px 48px',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'space-between',
-          gap: 40,
+          gap: 32,
           flexWrap: 'wrap',
           opacity: ctaVisible ? 1 : 0,
           transform: ctaVisible ? 'translateY(0)' : 'translateY(28px)',
           transition: 'opacity 0.85s cubic-bezier(0.22,1,0.36,1), transform 0.85s cubic-bezier(0.22,1,0.36,1)',
         }}
       >
-        <p style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: 'clamp(28px, 3vw, 38px)', margin: 0 }}>
+        <p style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: 'clamp(26px, 3vw, 38px)', margin: 0 }}>
           Curious to try something?
         </p>
         <a

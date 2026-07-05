@@ -8,7 +8,7 @@ const contactRows = [
   { mono: '04', label: 'Visit',     value: 'AM 240 Sukhliya, Indore',  href: 'https://maps.google.com/?q=Sukhliya,Indore' },
 ]
 
-function ContactRow({ row, index }) {
+function ContactRow({ row }) {
   const [hovered, setHovered] = useState(false)
   return (
     <a
@@ -21,8 +21,8 @@ function ContactRow({ row, index }) {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
-        gap: 24,
-        padding: '22px 0',
+        gap: 16,
+        padding: '20px 0',
         borderBottom: '1px solid #E7E1D4',
         textDecoration: 'none',
         background: hovered ? '#F5F1E7' : 'transparent',
@@ -33,24 +33,26 @@ function ContactRow({ row, index }) {
         transition: 'background 0.3s, margin 0.3s, padding 0.3s',
       }}
     >
-      <div style={{ display: 'flex', alignItems: 'center', gap: 32 }}>
-        <span style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: 9.5, letterSpacing: '0.2em', color: '#B3A896', minWidth: 20 }}>
+      <div style={{ display: 'flex', alignItems: 'center', gap: 20, minWidth: 0 }}>
+        <span style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: 9.5, letterSpacing: '0.2em', color: '#B3A896', flexShrink: 0 }}>
           {row.mono}
         </span>
-        <span style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: 9.5, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#A07C4F', minWidth: 80 }}>
+        <span style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: 9.5, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#A07C4F', flexShrink: 0, minWidth: 72 }}>
           {row.label}
         </span>
         <span style={{
           fontFamily: "'DM Serif Display', serif",
-          fontSize: 'clamp(22px, 2.2vw, 30px)',
+          fontSize: 'clamp(16px, 2.2vw, 30px)',
           color: '#16120D',
           lineHeight: 1,
-          transition: 'color 0.25s',
+          overflow: 'hidden',
+          textOverflow: 'ellipsis',
+          whiteSpace: 'nowrap',
         }}>
           {row.value}
         </span>
       </div>
-      <span style={{ color: hovered ? '#A07C4F' : '#C9B89A', fontSize: 16, transition: 'color 0.25s, transform 0.25s', transform: hovered ? 'translateX(4px)' : 'none' }}>→</span>
+      <span style={{ color: hovered ? '#A07C4F' : '#C9B89A', fontSize: 16, flexShrink: 0, transition: 'color 0.25s, transform 0.25s', transform: hovered ? 'translateX(4px)' : 'none' }}>→</span>
     </a>
   )
 }
@@ -97,6 +99,7 @@ export default function Contact() {
       {/* ── HEADER ── */}
       <div
         ref={headerRef}
+        className="r-pad"
         style={{
           maxWidth: 1380,
           margin: '0 auto',
@@ -109,13 +112,13 @@ export default function Contact() {
         <p style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: 10.5, letterSpacing: '0.2em', color: '#A07C4F', margin: '0 0 24px' }}>
           ( GET IN TOUCH )
         </p>
-        <h1 style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 400, fontSize: 'clamp(56px, 8vw, 120px)', lineHeight: 0.95, letterSpacing: '-0.02em', margin: '0 0 64px' }}>
+        <h1 style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 400, fontSize: 'clamp(48px, 8vw, 120px)', lineHeight: 0.95, letterSpacing: '-0.02em', margin: '0 0 56px' }}>
           Say hello<em style={{ color: '#A07C4F' }}>.</em>
         </h1>
       </div>
 
-      {/* ── BODY — 2-col grid ── */}
-      <div style={{ maxWidth: 1380, margin: '0 auto', padding: '0 48px 110px', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 80, alignItems: 'start' }}>
+      {/* ── BODY ── */}
+      <div className="r-pad r-grid-1" style={{ maxWidth: 1380, margin: '0 auto', padding: '0 48px 100px', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 72, alignItems: 'start' }}>
 
         {/* Left — contact rows + map */}
         <div
@@ -127,11 +130,11 @@ export default function Contact() {
           }}
         >
           <div style={{ borderTop: '1px solid #E7E1D4' }}>
-            {contactRows.map((row, i) => <ContactRow key={row.mono} row={row} index={i} />)}
+            {contactRows.map((row) => <ContactRow key={row.mono} row={row} />)}
           </div>
 
           {/* Map */}
-          <div style={{ marginTop: 40, position: 'relative', height: 280, overflow: 'hidden', background: '#EDE7DA' }}>
+          <div style={{ marginTop: 36, position: 'relative', height: 260, overflow: 'hidden', background: '#EDE7DA' }}>
             <iframe
               title="Billmix location"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3679.7!2d75.8577!3d22.7196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjLCsDQzJzEwLjYiTiA3NcKwNTEnMjcuNyJF!5e0!3m2!1sen!2sin!4v1"
@@ -151,6 +154,7 @@ export default function Contact() {
         {/* Right — dark form */}
         <div
           ref={rightRef}
+          className="contact-form-pad"
           style={{
             background: '#16120D',
             padding: '52px 48px 56px',
@@ -160,17 +164,17 @@ export default function Contact() {
           }}
         >
           <p style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: 10, letterSpacing: '0.2em', color: '#A07C4F', margin: '0 0 14px' }}>( SEND A MESSAGE )</p>
-          <p style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: 'clamp(26px, 2.8vw, 38px)', color: '#FBFAF6', margin: '0 0 44px', lineHeight: 1.15 }}>
+          <p style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: 'clamp(22px, 2.8vw, 38px)', color: '#FBFAF6', margin: '0 0 40px', lineHeight: 1.15 }}>
             Tell us what you'd like<br /><em style={{ color: '#E3C892' }}>— and when.</em>
           </p>
 
           {sent && (
-            <div style={{ borderLeft: '2px solid #E3C892', background: 'rgba(227,200,146,0.08)', padding: '12px 18px', marginBottom: 32 }}>
+            <div style={{ borderLeft: '2px solid #E3C892', background: 'rgba(227,200,146,0.08)', padding: '12px 18px', marginBottom: 28 }}>
               <p style={{ fontSize: 12.5, color: '#E3C892', margin: 0 }}>Opening WhatsApp — we'll get back to you shortly.</p>
             </div>
           )}
 
-          <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: 34 }}>
+          <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: 30 }}>
             {[
               { id: 'name',  label: '01 — YOUR NAME',    type: 'text', placeholder: 'Rahul Sharma' },
               { id: 'phone', label: '02 — PHONE NUMBER', type: 'tel',  placeholder: '+91 98765 43210' },

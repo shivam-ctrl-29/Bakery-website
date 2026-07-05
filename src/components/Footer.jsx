@@ -10,9 +10,9 @@ const navLinks = [
 export default function Footer() {
   return (
     <footer style={{ borderTop: '1px solid #E7E1D4', background: '#FBFAF6' }}>
-      <div style={{ maxWidth: 1320, margin: '0 auto', padding: '72px 48px 56px' }}>
+      <div className="r-pad" style={{ maxWidth: 1320, margin: '0 auto', padding: '64px 48px 48px' }}>
 
-        <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: 48, flexWrap: 'wrap', marginBottom: 64 }}>
+        <div className="footer-cols" style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: 48, flexWrap: 'wrap', marginBottom: 56 }}>
 
           {/* Brand */}
           <div>
