@@ -16,9 +16,9 @@ export default function Footer() {
 
           {/* Brand */}
           <div>
-            <p style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: 34, letterSpacing: '0.12em', margin: '0 0 14px' }}>BILLMIX</p>
+            <p style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: 34, letterSpacing: '0.12em', margin: '0 0 14px' }}>[BAKERY NAME]</p>
             <p style={{ fontSize: 12.5, lineHeight: 1.8, color: '#8B8071', margin: 0, maxWidth: 260 }}>
-              An eggless patisserie, made at home in Sukhliya, Indore. Reserved a day ahead — made only for you.
+              An [bakery tagline], made at home in [CITY, STATE]. Reserved a day ahead — made only for you.
             </p>
           </div>
 
@@ -43,9 +43,9 @@ export default function Footer() {
             <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
               <p style={{ fontSize: 10, letterSpacing: '0.26em', textTransform: 'uppercase', color: '#B3A896', margin: '0 0 4px' }}>Contact</p>
               {[
-                { label: '+91 90399 78297', href: 'tel:+919039978297' },
-                { label: '@thedarshil19', href: 'https://instagram.com/thedarshil19' },
-                { label: 'WhatsApp', href: 'https://wa.me/919039978297' },
+                { label: '[PHONE NUMBER]', href: 'tel:+[WHATSAPP NUMBER]' },
+                { label: '@[INSTAGRAM HANDLE]', href: 'https://instagram.com/[INSTAGRAM HANDLE]' },
+                { label: 'WhatsApp', href: 'https://wa.me/[WHATSAPP NUMBER]' },
               ].map(({ label, href }) => (
                 <a
                   key={href}
@@ -64,8 +64,8 @@ export default function Footer() {
         </div>
 
         <div style={{ borderTop: '1px solid #E7E1D4', paddingTop: 28, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 24, flexWrap: 'wrap' }}>
-          <p style={{ fontSize: 11, color: '#B3A896', margin: 0 }}>© {new Date().getFullYear()} Billmix · Eggless, always.</p>
-          <p style={{ fontSize: 11, color: '#B3A896', margin: 0 }}>Sukhliya, Indore, Madhya Pradesh</p>
+          <p style={{ fontSize: 11, color: '#B3A896', margin: 0 }}>© {new Date().getFullYear()} [BAKERY NAME] · Eggless, always.</p>
+          <p style={{ fontSize: 11, color: '#B3A896', margin: 0 }}>[CITY, STATE], Madhya Pradesh</p>
         </div>
 
       </div>

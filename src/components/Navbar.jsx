@@ -39,7 +39,7 @@ export default function Navbar() {
           to="/"
           style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: 26, letterSpacing: '0.12em', color: '#16120D', textDecoration: 'none', cursor: 'pointer' }}
         >
-          BILLMIX
+          [BAKERY NAME]
         </Link>
 
         {/* Desktop nav */}
@@ -72,7 +72,7 @@ export default function Navbar() {
 
         {/* Order CTA */}
         <a
-          href="https://wa.me/919039978297"
+          href="https://wa.me/[WHATSAPP NUMBER]"
           target="_blank"
           rel="noopener noreferrer"
           className="nav-desktop"
@@ -124,7 +124,7 @@ export default function Navbar() {
             </NavLink>
           ))}
           <a
-            href="https://wa.me/919039978297"
+            href="https://wa.me/[WHATSAPP NUMBER]"
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => setOpen(false)}

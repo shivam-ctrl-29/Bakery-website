@@ -1,12 +1,13 @@
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import { useScrollReveal } from '../hooks/useScrollReveal'
-import tiramisu from '../assets/tiramisu.webp'
-import cookie from '../assets/cookie.webp'
+// TEMPLATE: Replace these URLs with your own product photos
+const tiramisu = 'https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?w=1200&q=80'
+const cookie   = 'https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=800&q=80'
 
 const credoBase = [
   '100% Eggless', 'Home Kitchen', 'Small Batches', 'Made to Order',
-  'Reserved 24h Ahead', 'Sukhliya · Indore',
+  'Reserved 24h Ahead', '[CITY] · [CITY]',
 ]
 const credoItems = [...credoBase, ...credoBase, ...credoBase, ...credoBase]
 
@@ -33,12 +34,12 @@ export default function Home() {
   return (
     <main className="page-in" style={{ flex: 1 }}>
       <Helmet>
-        <title>Billmix — Eggless Patisserie, Indore | Made to Order</title>
-        <meta name="description" content="Billmix is an eggless patisserie made at home in Sukhliya, Indore. Tiramisu, cookies, banana bread and hummus — reserved 24 hours ahead, made only for you." />
+        <title>[BAKERY NAME] — [BAKERY TAGLINE], [CITY] | Made to Order</title>
+        <meta name="description" content="[BAKERY NAME] is an [bakery tagline] made at home in [CITY, STATE]. Tiramisu, cookies, banana bread and hummus — reserved 24 hours ahead, made only for you." />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://bakery-website-tawny.vercel.app/" />
-        <meta property="og:title" content="Billmix — Eggless Patisserie, Indore | Made to Order" />
-        <meta property="og:description" content="Billmix is an eggless patisserie made at home in Sukhliya, Indore. Tiramisu, cookies, banana bread and hummus — reserved 24 hours ahead, made only for you." />
+        <meta property="og:title" content="[BAKERY NAME] — [BAKERY TAGLINE], [CITY] | Made to Order" />
+        <meta property="og:description" content="[BAKERY NAME] is an [bakery tagline] made at home in [CITY, STATE]. Tiramisu, cookies, banana bread and hummus — reserved 24 hours ahead, made only for you." />
         <meta property="og:image" content="https://bakery-website-tawny.vercel.app/og-tiramisu.jpg" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://bakery-website-tawny.vercel.app/" />
@@ -50,7 +51,7 @@ export default function Home() {
         <div style={{ position: 'absolute', inset: 0, overflow: 'hidden' }}>
           <img
             src={tiramisu}
-            alt="Billmix signature tiramisu"
+            alt="[BAKERY NAME] signature tiramisu"
             className="hero-zoom"
             fetchPriority="high"
             loading="eager"
@@ -66,7 +67,7 @@ export default function Home() {
             ( EGGLESS PATISSERIE )
           </p>
           <p className="hero-meta-r" style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: 10.5, letterSpacing: '0.2em', color: 'rgba(251,250,246,0.75)', margin: 0 }}>
-            SUKHLIYA · INDORE — EST. 2024
+            [CITY] · [CITY] — EST. [YEAR]
           </p>
         </div>
 
@@ -79,11 +80,11 @@ export default function Home() {
 
           <div className="hero-body r-stack" style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', gap: 24, flexWrap: 'wrap' }}>
             <p style={{ fontSize: 13.5, lineHeight: 1.85, color: 'rgba(251,250,246,0.72)', maxWidth: 380, margin: 0 }}>
-              Small batches from a home kitchen in Sukhliya. Composed by hand, reserved a day ahead, made only for you.
+              Small batches from a home kitchen in [CITY]. Composed by hand, reserved a day ahead, made only for you.
             </p>
             <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
               <a
-                href="https://wa.me/919039978297"
+                href="https://wa.me/[WHATSAPP NUMBER]"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{ fontSize: 12, letterSpacing: '0.16em', textTransform: 'uppercase', color: '#16120D', background: '#FBFAF6', padding: '16px 32px', textDecoration: 'none', transition: 'background 0.3s' }}
@@ -207,7 +208,7 @@ export default function Home() {
           }}
         >
           <p style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: 11, letterSpacing: '0.18em', color: '#A07C4F', margin: '0 0 48px', textAlign: 'center' }}>
-            ( THE BILLMIX MANIFESTO )
+            ( THE [BAKERY NAME] MANIFESTO )
           </p>
           <p style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 400, fontSize: 'clamp(28px, 4.8vw, 68px)', lineHeight: 1.28, letterSpacing: '-0.015em', color: '#16120D', margin: '0 auto 48px', textAlign: 'center' }}>
             We bake without eggs, without shortcuts, and without a factory — every order leaves a home kitchen made for exactly one person —{' '}
@@ -216,8 +217,8 @@ export default function Home() {
           <div style={{ width: 40, height: 1, background: '#C9B89A', margin: '0 auto 36px' }} />
           <div className="r-stack" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 32, flexWrap: 'wrap' }}>
             <p style={{ fontSize: 13, margin: 0, fontWeight: 500, textAlign: 'center' }}>
-              Darshil Yadav{' '}
-              <span style={{ color: '#8B8071', fontWeight: 400 }}>— Founder, Sukhliya · Indore</span>
+              [FOUNDER NAME]{' '}
+              <span style={{ color: '#8B8071', fontWeight: 400 }}>— Founder, [CITY] · [CITY]</span>
             </p>
             <Link
               to="/about"
@@ -257,7 +258,7 @@ export default function Home() {
             </h2>
           </div>
           <a
-            href="https://wa.me/919039978297"
+            href="https://wa.me/[WHATSAPP NUMBER]"
             target="_blank"
             rel="noopener noreferrer"
             style={{ flexShrink: 0, fontSize: 12, letterSpacing: '0.16em', textTransform: 'uppercase', color: '#16120D', background: '#FBFAF6', padding: '18px 44px', textDecoration: 'none', transition: 'background 0.3s' }}

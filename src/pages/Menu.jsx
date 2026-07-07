@@ -1,12 +1,13 @@
 import { useState } from 'react'
 import { Helmet } from 'react-helmet-async'
 import { useScrollReveal } from '../hooks/useScrollReveal'
-import tiramisu from '../assets/tiramisu.webp'
-import cookie from '../assets/cookie.webp'
-import bananaBread from '../assets/banana-bread.webp'
-import hummusClassic from '../assets/image2.webp'
-import hummusBasil from '../assets/image1.webp'
-import hummusPeri from '../assets/image3.webp'
+// TEMPLATE: Replace these URLs with your own product photos
+const tiramisu    = 'https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?w=800&q=80'
+const cookie      = 'https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=800&q=80'
+const bananaBread = 'https://images.unsplash.com/photo-1509440159596-0249088772ff?w=800&q=80'
+const hummusClassic = 'https://images.unsplash.com/photo-1541614101331-1a5a3a194e92?w=800&q=80'
+const hummusBasil   = 'https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=800&q=80'
+const hummusPeri    = 'https://images.unsplash.com/photo-1592417817098-8fd3d9eb14a5?w=800&q=80'
 
 const menuSections = [
   {
@@ -69,11 +70,11 @@ export default function Menu() {
   return (
     <main className="page-in" style={{ flex: 1 }}>
       <Helmet>
-        <title>Our Menu — Billmix Eggless Patisserie Indore</title>
+        <title>Our Menu — [BAKERY NAME] [BAKERY TAGLINE] [CITY]</title>
         <meta name="description" content="Six things, done properly. Everything eggless, made to order. Reserve at least 24 hours before your delivery date." />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://bakery-website-tawny.vercel.app/menu" />
-        <meta property="og:title" content="Our Menu — Billmix Eggless Patisserie Indore" />
+        <meta property="og:title" content="Our Menu — [BAKERY NAME] [BAKERY TAGLINE] [CITY]" />
         <meta property="og:description" content="Six things, done properly. Everything eggless, made to order. Reserve at least 24 hours before your delivery date." />
         <meta property="og:url" content="https://bakery-website-tawny.vercel.app/menu" />
       </Helmet>
@@ -109,7 +110,7 @@ export default function Menu() {
               Everything is eggless and made to order — nothing sits on a shelf. Kindly reserve at least 24 hours before your delivery date.
             </p>
             <a
-              href="https://wa.me/919039978297"
+              href="https://wa.me/[WHATSAPP NUMBER]"
               target="_blank"
               rel="noopener noreferrer"
               style={{ fontSize: 12, letterSpacing: '0.16em', textTransform: 'uppercase', color: '#16120D', borderBottom: '1px solid #A07C4F', paddingBottom: 5, textDecoration: 'none', transition: 'color 0.3s' }}
@@ -150,7 +151,7 @@ export default function Menu() {
           </div>
           <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
             <a
-              href="https://wa.me/919039978297"
+              href="https://wa.me/[WHATSAPP NUMBER]"
               target="_blank"
               rel="noopener noreferrer"
               style={{ fontSize: 12, letterSpacing: '0.16em', textTransform: 'uppercase', color: '#16120D', background: '#FBFAF6', padding: '18px 44px', textDecoration: 'none', transition: 'background 0.3s' }}

@@ -1,6 +1,7 @@
 import { Helmet } from 'react-helmet-async'
 import { useScrollReveal } from '../hooks/useScrollReveal'
-import founder from '../assets/founder.webp'
+// TEMPLATE: Replace with your founder's photo
+const founder = 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=800&q=80'
 
 const values = [
   { num: '01', title: 'Always Eggless',  desc: 'Every single product — no exceptions, no compromises, no hidden ingredients.' },
@@ -17,12 +18,12 @@ export default function About() {
   return (
     <main className="page-in" style={{ flex: 1 }}>
       <Helmet>
-        <title>Our Story — Billmix | Made at Home, Made with Intent</title>
-        <meta name="description" content="Billmix began in 2024 with a conviction — that baking without eggs should mean compromising on nothing. Made fresh in a home kitchen in Sukhliya, Indore." />
+        <title>Our Story — [BAKERY NAME] | Made at Home, Made with Intent</title>
+        <meta name="description" content="[BAKERY NAME] began in [YEAR] with a conviction — that baking without eggs should mean compromising on nothing. Made fresh in a home kitchen in [CITY, STATE]." />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://bakery-website-tawny.vercel.app/about" />
-        <meta property="og:title" content="Our Story — Billmix | Made at Home, Made with Intent" />
-        <meta property="og:description" content="Billmix began in 2024 with a conviction — that baking without eggs should mean compromising on nothing. Made fresh in a home kitchen in Sukhliya, Indore." />
+        <meta property="og:title" content="Our Story — [BAKERY NAME] | Made at Home, Made with Intent" />
+        <meta property="og:description" content="[BAKERY NAME] began in [YEAR] with a conviction — that baking without eggs should mean compromising on nothing. Made fresh in a home kitchen in [CITY, STATE]." />
         <meta property="og:url" content="https://bakery-website-tawny.vercel.app/about" />
       </Helmet>
 
@@ -35,7 +36,7 @@ export default function About() {
           <div style={{ position: 'relative', aspectRatio: '1/1', overflow: 'hidden', background: '#1A1410', zIndex: 1 }}>
             <img
               src={founder}
-              alt="Darshil Yadav — Founder, Billmix"
+              alt="[FOUNDER NAME] — Founder, [BAKERY NAME]"
               loading="lazy"
               style={{
                 position: 'absolute', inset: 0, width: '100%', height: '100%',
@@ -45,8 +46,8 @@ export default function About() {
             />
             <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(22,16,10,0.5) 0%, transparent 50%)' }} />
             <div style={{ position: 'absolute', bottom: 24, left: 24 }}>
-              <p style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: 9.5, letterSpacing: '0.22em', color: 'rgba(251,250,246,0.6)', margin: '0 0 5px' }}>DARSHIL YADAV</p>
-              <p style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: 9.5, letterSpacing: '0.22em', color: 'rgba(251,250,246,0.35)', margin: 0 }}>FOUNDER · EST. 2024</p>
+              <p style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: 9.5, letterSpacing: '0.22em', color: 'rgba(251,250,246,0.6)', margin: '0 0 5px' }}>[FOUNDER NAME]</p>
+              <p style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: 9.5, letterSpacing: '0.22em', color: 'rgba(251,250,246,0.35)', margin: 0 }}>FOUNDER · EST. [YEAR]</p>
             </div>
           </div>
         </div>
@@ -68,7 +69,7 @@ export default function About() {
           </h1>
           <div style={{ width: 36, height: 1, background: '#C9B89A', margin: '0 0 32px' }} />
           <p style={{ fontSize: 14.5, lineHeight: 1.95, color: '#8B8071', maxWidth: 400, margin: 0 }}>
-            Billmix began in 2024 with a simple conviction — that baking without eggs should mean compromising on nothing. Every piece is made fresh in a home kitchen in Sukhliya, Indore. No factory. No shortcuts.
+            [BAKERY NAME] began in [YEAR] with a simple conviction — that baking without eggs should mean compromising on nothing. Every piece is made fresh in a home kitchen in [CITY, STATE]. No factory. No shortcuts.
           </p>
         </div>
       </section>
@@ -92,19 +93,19 @@ export default function About() {
               "I make food that people genuinely enjoy eating."
             </blockquote>
             <div style={{ width: 28, height: 1, background: '#A07C4F', marginBottom: 14 }} />
-            <p style={{ fontSize: 13, margin: '0 0 4px', fontWeight: 500 }}>Darshil Yadav</p>
-            <p style={{ fontSize: 11, color: '#8B8071', margin: 0 }}>Founder · Billmix · Est. 2024</p>
+            <p style={{ fontSize: 13, margin: '0 0 4px', fontWeight: 500 }}>[FOUNDER NAME]</p>
+            <p style={{ fontSize: 11, color: '#8B8071', margin: 0 }}>Founder · [BAKERY NAME] · Est. [YEAR]</p>
           </div>
 
           <div style={{ display: 'flex', flexDirection: 'column', gap: 22, fontSize: 14, lineHeight: 1.95, color: '#8B8071' }}>
             <p style={{ margin: 0 }}>
-              Hello — I'm Darshil, the person behind Billmix. This began as a passion project: I loved making food people actually enjoyed eating. Not mass-produced. Not frozen. Real, home-made bakes with good ingredients.
+              Hello — I'm [FOUNDER NAME], the person behind [BAKERY NAME]. This began as a passion project: I loved making food people actually enjoyed eating. Not mass-produced. Not frozen. Real, home-made bakes with good ingredients.
             </p>
             <p style={{ margin: 0 }}>
-              Everything here is <span style={{ color: '#16120D', fontWeight: 500 }}>entirely eggless</span>. I've spent months perfecting recipes that prove great baking doesn't need eggs — from a silky tiramisu built on house-made ladyfingers to the brown-butter Cookie 411.
+              Everything here is <span style={{ color: '#16120D', fontWeight: 500 }}>entirely [BAKERY TAGLINE KEYWORD]</span>. I've spent months perfecting recipes that prove great baking doesn't need eggs — from a silky tiramisu built on house-made ladyfingers to the brown-butter Cookie 411.
             </p>
             <p style={{ margin: 0 }}>
-              We work out of a home kitchen in Sukhliya, Indore, and every order gets personal attention. You're not a number here — you're the reason I'm baking that day.
+              We work out of a home kitchen in [CITY, STATE], and every order gets personal attention. You're not a number here — you're the reason I'm baking that day.
             </p>
           </div>
         </div>
@@ -168,7 +169,7 @@ export default function About() {
           Curious to try something?
         </p>
         <a
-          href="https://wa.me/919039978297"
+          href="https://wa.me/[WHATSAPP NUMBER]"
           target="_blank"
           rel="noopener noreferrer"
           style={{ flexShrink: 0, fontSize: 12, letterSpacing: '0.16em', textTransform: 'uppercase', color: '#FBFAF6', background: '#16120D', padding: '17px 40px', textDecoration: 'none', transition: 'background 0.3s' }}

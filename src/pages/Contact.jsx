@@ -3,10 +3,10 @@ import { Helmet } from 'react-helmet-async'
 import { useScrollReveal } from '../hooks/useScrollReveal'
 
 const contactRows = [
-  { mono: '01', label: 'Call',      value: '+91 90399 78297',         href: 'tel:+919039978297' },
-  { mono: '02', label: 'WhatsApp',  value: '+91 90399 78297',          href: 'https://wa.me/919039978297' },
-  { mono: '03', label: 'Instagram', value: '@thedarshil19',            href: 'https://instagram.com/thedarshil19' },
-  { mono: '04', label: 'Visit',     value: 'AM 240 Sukhliya, Indore',  href: 'https://maps.google.com/?q=Sukhliya,Indore' },
+  { mono: '01', label: 'Call',      value: '[PHONE NUMBER]',         href: 'tel:+[WHATSAPP NUMBER]' },
+  { mono: '02', label: 'WhatsApp',  value: '[PHONE NUMBER]',          href: 'https://wa.me/[WHATSAPP NUMBER]' },
+  { mono: '03', label: 'Instagram', value: '@[INSTAGRAM HANDLE]',            href: 'https://instagram.com/[INSTAGRAM HANDLE]' },
+  { mono: '04', label: 'Visit',     value: '[BAKERY ADDRESS]',  href: 'https://maps.google.com/?q=[CITY],[CITY]' },
 ]
 
 function ContactRow({ row }) {
@@ -73,8 +73,8 @@ export default function Contact() {
 
   function handleSubmit(e) {
     e.preventDefault()
-    const text = encodeURIComponent(`Hello Billmix!\nName: ${form.name}\nPhone: ${form.phone}\nMessage: ${form.message}`)
-    window.open(`https://wa.me/919039978297?text=${text}`, '_blank')
+    const text = encodeURIComponent(`Hello [BAKERY NAME]!\nName: ${form.name}\nPhone: ${form.phone}\nMessage: ${form.message}`)
+    window.open(`https://wa.me/[WHATSAPP NUMBER]?text=${text}`, '_blank')
     setSent(true)
     setTimeout(() => setSent(false), 4000)
     setForm({ name: '', phone: '', message: '' })
@@ -97,12 +97,12 @@ export default function Contact() {
   return (
     <main className="page-in" style={{ flex: 1 }}>
       <Helmet>
-        <title>Reserve an Order — Billmix Eggless Patisserie Indore</title>
-        <meta name="description" content="Reserve your order at least 24 hours ahead. Call, WhatsApp, or fill the form — everything at Billmix is made fresh, just for you." />
+        <title>Reserve an Order — [BAKERY NAME] [BAKERY TAGLINE] [CITY]</title>
+        <meta name="description" content="Reserve your order at least 24 hours ahead. Call, WhatsApp, or fill the form — everything at [BAKERY NAME] is made fresh, just for you." />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://bakery-website-tawny.vercel.app/contact" />
-        <meta property="og:title" content="Reserve an Order — Billmix Eggless Patisserie Indore" />
-        <meta property="og:description" content="Reserve your order at least 24 hours ahead. Call, WhatsApp, or fill the form — everything at Billmix is made fresh, just for you." />
+        <meta property="og:title" content="Reserve an Order — [BAKERY NAME] [BAKERY TAGLINE] [CITY]" />
+        <meta property="og:description" content="Reserve your order at least 24 hours ahead. Call, WhatsApp, or fill the form — everything at [BAKERY NAME] is made fresh, just for you." />
         <meta property="og:url" content="https://bakery-website-tawny.vercel.app/contact" />
       </Helmet>
 
@@ -146,8 +146,8 @@ export default function Contact() {
           {/* Map */}
           <div style={{ marginTop: 36, position: 'relative', height: 260, overflow: 'hidden', background: '#EDE7DA' }}>
             <iframe
-              title="Billmix location"
-              src="https://maps.google.com/maps?q=Sukhliya%2C+Indore%2C+Madhya+Pradesh+452010&output=embed"
+              title="[BAKERY NAME] location"
+              src="https://maps.google.com/maps?q=[BAKERY+ADDRESS]&output=embed"
               width="100%" height="100%"
               style={{ border: 0, filter: 'grayscale(60%) sepia(12%) contrast(1.05)' }}
               loading="lazy"
@@ -155,7 +155,7 @@ export default function Contact() {
             />
             <div style={{ position: 'absolute', bottom: 14, left: 14, background: 'rgba(251,250,246,0.94)', padding: '8px 14px' }}>
               <p style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: 9.5, letterSpacing: '0.16em', color: '#16120D', margin: 0 }}>
-                AM 240 SUKHLIYA — INDORE, MP
+                [BAKERY ADDRESS]
               </p>
             </div>
           </div>
