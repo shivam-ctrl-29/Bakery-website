@@ -9,23 +9,24 @@ const hummusClassic = 'https://images.unsplash.com/photo-1541614101331-1a5a3a194
 const hummusBasil   = 'https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=800&q=80'
 const hummusPeri    = 'https://images.unsplash.com/photo-1592417817098-8fd3d9eb14a5?w=800&q=80'
 
+// TEMPLATE: Edit these menu sections with your own categories and items
 const menuSections = [
   {
-    category: 'Sweet Treats',
-    course: 'COURSE 01 — SWEET',
+    category: '[CATEGORY 1 NAME]',
+    course: 'COURSE 01 — [LABEL]',
     items: [
-      { name: 'Tiramisu',     tag: 'SIGNATURE',    img: tiramisu,    desc: 'Espresso-soaked, house-made eggless ladyfingers layered with silky mascarpone. Pure indulgence.' },
-      { name: 'Cookie 411',   tag: 'BROWN BUTTER', img: cookie,      desc: 'Soft-centred and chocolate-studded, with the warm, nutty richness of brown butter.' },
-      { name: 'Banana Bread', tag: 'COMFORT',      img: bananaBread, desc: 'Warm cinnamon spice meets delicate banana in a perfectly moist tea cake.' },
+      { name: '[ITEM 1 NAME]', tag: '[TAG]', img: tiramisu,    desc: '[Item 1 description — one or two sentences about taste, texture, or what makes it special.]' },
+      { name: '[ITEM 2 NAME]', tag: '[TAG]', img: cookie,      desc: '[Item 2 description — one or two sentences about taste, texture, or what makes it special.]' },
+      { name: '[ITEM 3 NAME]', tag: '[TAG]', img: bananaBread, desc: '[Item 3 description — one or two sentences about taste, texture, or what makes it special.]' },
     ],
   },
   {
-    category: 'Hummus',
-    course: 'COURSE 02 — SAVOURY',
+    category: '[CATEGORY 2 NAME]',
+    course: 'COURSE 02 — [LABEL]',
     items: [
-      { name: 'Classic',      tag: 'TRADITIONAL', img: hummusClassic, desc: 'A Mediterranean staple made the traditional way — smooth, rich, and endlessly versatile.' },
-      { name: 'Basil Blend',  tag: 'HERBACEOUS',  img: hummusBasil,   desc: 'Creamy hummus folded with fresh basil and cold-pressed extra virgin olive oil.' },
-      { name: 'Roasted Peri', tag: 'BOLD',         img: hummusPeri,   desc: 'Slow-roasted garlic finished with a spicy peri peri edge. Bold and quietly addictive.' },
+      { name: '[ITEM 4 NAME]', tag: '[TAG]', img: hummusClassic, desc: '[Item 4 description — one or two sentences about taste, texture, or what makes it special.]' },
+      { name: '[ITEM 5 NAME]', tag: '[TAG]', img: hummusBasil,   desc: '[Item 5 description — one or two sentences about taste, texture, or what makes it special.]' },
+      { name: '[ITEM 6 NAME]', tag: '[TAG]', img: hummusPeri,    desc: '[Item 6 description — one or two sentences about taste, texture, or what makes it special.]' },
     ],
   },
 ]
@@ -101,13 +102,13 @@ export default function Menu() {
               ( THE MENU — SHORT &amp; HONEST )
             </p>
             <h1 style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 400, fontSize: 'clamp(52px, 9vw, 140px)', lineHeight: 0.92, letterSpacing: '-0.02em', margin: 0 }}>
-              Six things<em style={{ color: '#A07C4F' }}>,</em><br />
-              done <em style={{ color: '#A07C4F' }}>properly.</em>
+              [MENU HEADLINE],<br />
+              <em style={{ color: '#A07C4F' }}>[MENU SUBHEADLINE].</em>
             </h1>
           </div>
           <div style={{ paddingBottom: 8, maxWidth: 320 }}>
             <p style={{ fontSize: 13.5, lineHeight: 1.9, color: '#8B8071', margin: '0 0 20px' }}>
-              Everything is eggless and made to order — nothing sits on a shelf. Kindly reserve at least 24 hours before your delivery date.
+              [Short intro sentence about your menu — e.g. "Everything is made to order, nothing sits on a shelf."]
             </p>
             <a
               href="https://wa.me/[WHATSAPP NUMBER]"

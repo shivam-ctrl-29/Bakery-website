@@ -18,7 +18,7 @@ export default function Footer() {
           <div>
             <p style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: 34, letterSpacing: '0.12em', margin: '0 0 14px' }}>[BAKERY NAME]</p>
             <p style={{ fontSize: 12.5, lineHeight: 1.8, color: '#8B8071', margin: 0, maxWidth: 260 }}>
-              An [bakery tagline], made at home in [CITY, STATE]. Reserved a day ahead — made only for you.
+              [BAKERY TAGLINE] — made at home in [CITY, STATE]. Reserved a day ahead, made only for you.
             </p>
           </div>
 
@@ -64,8 +64,8 @@ export default function Footer() {
         </div>
 
         <div style={{ borderTop: '1px solid #E7E1D4', paddingTop: 28, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 24, flexWrap: 'wrap' }}>
-          <p style={{ fontSize: 11, color: '#B3A896', margin: 0 }}>© {new Date().getFullYear()} [BAKERY NAME] · Eggless, always.</p>
-          <p style={{ fontSize: 11, color: '#B3A896', margin: 0 }}>[CITY, STATE], Madhya Pradesh</p>
+          <p style={{ fontSize: 11, color: '#B3A896', margin: 0 }}>© {new Date().getFullYear()} [BAKERY NAME] · [BAKERY TAGLINE].</p>
+          <p style={{ fontSize: 11, color: '#B3A896', margin: 0 }}>[CITY, STATE]</p>
         </div>
 
       </div>
