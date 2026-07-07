@@ -1,11 +1,11 @@
 import { useState } from 'react'
 import { useScrollReveal } from '../hooks/useScrollReveal'
-import tiramisu from '../assets/tiramisu.jpeg'
-import cookie from '../assets/cookie.jpg'
-import bananaBread from '../assets/banana-bread.jpg'
-import hummusClassic from '../assets/image2.png'
-import hummusBasil from '../assets/image1.png'
-import hummusPeri from '../assets/image3.png'
+import tiramisu from '../assets/tiramisu.webp'
+import cookie from '../assets/cookie.webp'
+import bananaBread from '../assets/banana-bread.webp'
+import hummusClassic from '../assets/image2.webp'
+import hummusBasil from '../assets/image1.webp'
+import hummusPeri from '../assets/image3.webp'
 
 const menuSections = [
   {
@@ -51,6 +51,7 @@ function MenuRow({ item }) {
         <img
           src={item.img}
           alt={item.name}
+          loading="lazy"
           style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.8s cubic-bezier(0.22,1,0.36,1)', transform: hovered ? 'scale(1.06)' : 'scale(1)' }}
         />
       </div>

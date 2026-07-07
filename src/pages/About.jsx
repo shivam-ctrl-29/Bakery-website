@@ -1,5 +1,5 @@
 import { useScrollReveal } from '../hooks/useScrollReveal'
-import founder from '../assets/founder.jpeg'
+import founder from '../assets/founder.webp'
 
 const values = [
   { num: '01', title: 'Always Eggless',  desc: 'Every single product — no exceptions, no compromises, no hidden ingredients.' },
@@ -26,6 +26,7 @@ export default function About() {
             <img
               src={founder}
               alt="Darshil Yadav — Founder, Billmix"
+              loading="lazy"
               style={{
                 position: 'absolute', inset: 0, width: '100%', height: '100%',
                 objectFit: 'cover', objectPosition: '60% 8%',

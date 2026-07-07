@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { useScrollReveal } from '../hooks/useScrollReveal'
-import tiramisu from '../assets/tiramisu.jpeg'
-import cookie from '../assets/cookie.jpg'
+import tiramisu from '../assets/tiramisu.webp'
+import cookie from '../assets/cookie.webp'
 
 const credoBase = [
   '100% Eggless', 'Home Kitchen', 'Small Batches', 'Made to Order',
@@ -15,6 +15,7 @@ function HoverImg({ src, alt, style }) {
       <img
         src={src}
         alt={alt}
+        loading="lazy"
         style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 1s cubic-bezier(0.22,1,0.36,1)' }}
         onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.04)'}
         onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}
@@ -39,6 +40,8 @@ export default function Home() {
             src={tiramisu}
             alt="Billmix signature tiramisu"
             className="hero-zoom"
+            fetchPriority="high"
+            loading="eager"
             style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }}
           />
         </div>
