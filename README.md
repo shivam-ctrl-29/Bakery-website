@@ -39,11 +39,11 @@ A premium, editorial-quality website template for food businesses — bakeries, 
 
 | Home | Menu |
 |------|------|
-| *(add screenshot)* | *(add screenshot)* |
+| ![Home](public/screenshots/home.webp) | ![Menu](public/screenshots/menu.png) |
 
 | About | Contact |
 |-------|---------|
-| *(add screenshot)* | *(add screenshot)* |
+| ![About](public/screenshots/about.png) | ![Contact](public/screenshots/contact.png) |
 
 ---
 
@@ -148,4 +148,4 @@ To connect a custom domain: Vercel Dashboard → your project → Settings → D
 
 ## License
 
-MIT — free to use for personal projects, client work, or resale.
+Personal & Commercial Use — you may use this template for personal projects and client work. Redistribution or resale of the template itself (modified or unmodified) is not permitted.
