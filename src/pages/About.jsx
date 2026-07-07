@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async'
 import { useScrollReveal } from '../hooks/useScrollReveal'
 import founder from '../assets/founder.webp'
 
@@ -15,6 +16,15 @@ export default function About() {
 
   return (
     <main className="page-in" style={{ flex: 1 }}>
+      <Helmet>
+        <title>Our Story — Billmix | Made at Home, Made with Intent</title>
+        <meta name="description" content="Billmix began in 2024 with a conviction — that baking without eggs should mean compromising on nothing. Made fresh in a home kitchen in Sukhliya, Indore." />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://bakery-website-tawny.vercel.app/about" />
+        <meta property="og:title" content="Our Story — Billmix | Made at Home, Made with Intent" />
+        <meta property="og:description" content="Billmix began in 2024 with a conviction — that baking without eggs should mean compromising on nothing. Made fresh in a home kitchen in Sukhliya, Indore." />
+        <meta property="og:url" content="https://bakery-website-tawny.vercel.app/about" />
+      </Helmet>
 
       {/* ── HERO — contained split with framed photo ── */}
       <section className="r-pad r-grid-1" style={{ maxWidth: 1380, margin: '0 auto', padding: '80px 48px 0', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 80, alignItems: 'center' }}>

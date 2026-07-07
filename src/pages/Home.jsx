@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 import { useScrollReveal } from '../hooks/useScrollReveal'
 import tiramisu from '../assets/tiramisu.webp'
 import cookie from '../assets/cookie.webp'
@@ -31,6 +32,17 @@ export default function Home() {
 
   return (
     <main className="page-in" style={{ flex: 1 }}>
+      <Helmet>
+        <title>Billmix — Eggless Patisserie, Indore | Made to Order</title>
+        <meta name="description" content="Billmix is an eggless patisserie made at home in Sukhliya, Indore. Tiramisu, cookies, banana bread and hummus — reserved 24 hours ahead, made only for you." />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://bakery-website-tawny.vercel.app/" />
+        <meta property="og:title" content="Billmix — Eggless Patisserie, Indore | Made to Order" />
+        <meta property="og:description" content="Billmix is an eggless patisserie made at home in Sukhliya, Indore. Tiramisu, cookies, banana bread and hummus — reserved 24 hours ahead, made only for you." />
+        <meta property="og:image" content="https://bakery-website-tawny.vercel.app/og-tiramisu.jpg" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://bakery-website-tawny.vercel.app/" />
+      </Helmet>
 
       {/* ── HERO ── */}
       <section style={{ position: 'relative', height: 'calc(100vh - 77px)', minHeight: 560, overflow: 'hidden', background: '#16120D' }}>

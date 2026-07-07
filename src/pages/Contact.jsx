@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Helmet } from 'react-helmet-async'
 import { useScrollReveal } from '../hooks/useScrollReveal'
 
 const contactRows = [
@@ -95,6 +96,15 @@ export default function Contact() {
 
   return (
     <main className="page-in" style={{ flex: 1 }}>
+      <Helmet>
+        <title>Reserve an Order — Billmix Eggless Patisserie Indore</title>
+        <meta name="description" content="Reserve your order at least 24 hours ahead. Call, WhatsApp, or fill the form — everything at Billmix is made fresh, just for you." />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://bakery-website-tawny.vercel.app/contact" />
+        <meta property="og:title" content="Reserve an Order — Billmix Eggless Patisserie Indore" />
+        <meta property="og:description" content="Reserve your order at least 24 hours ahead. Call, WhatsApp, or fill the form — everything at Billmix is made fresh, just for you." />
+        <meta property="og:url" content="https://bakery-website-tawny.vercel.app/contact" />
+      </Helmet>
 
       {/* ── HEADER ── */}
       <div

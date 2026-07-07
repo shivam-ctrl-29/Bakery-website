@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Helmet } from 'react-helmet-async'
 import { useScrollReveal } from '../hooks/useScrollReveal'
 import tiramisu from '../assets/tiramisu.webp'
 import cookie from '../assets/cookie.webp'
@@ -67,6 +68,15 @@ export default function Menu() {
 
   return (
     <main className="page-in" style={{ flex: 1 }}>
+      <Helmet>
+        <title>Our Menu — Billmix Eggless Patisserie Indore</title>
+        <meta name="description" content="Six things, done properly. Everything eggless, made to order. Reserve at least 24 hours before your delivery date." />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://bakery-website-tawny.vercel.app/menu" />
+        <meta property="og:title" content="Our Menu — Billmix Eggless Patisserie Indore" />
+        <meta property="og:description" content="Six things, done properly. Everything eggless, made to order. Reserve at least 24 hours before your delivery date." />
+        <meta property="og:url" content="https://bakery-website-tawny.vercel.app/menu" />
+      </Helmet>
       <section className="r-pad" style={{ maxWidth: 1380, margin: '0 auto', padding: '80px 48px 110px' }}>
 
         {/* Header */}

@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { HelmetProvider } from 'react-helmet-async'
 import { SpeedInsights } from '@vercel/speed-insights/react'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
@@ -9,6 +10,7 @@ import Contact from './pages/Contact'
 
 export default function App() {
   return (
+    <HelmetProvider>
     <BrowserRouter>
       <div className="flex flex-col min-h-screen">
         <Navbar />
@@ -22,5 +24,6 @@ export default function App() {
       </div>
       <SpeedInsights />
     </BrowserRouter>
+    </HelmetProvider>
   )
 }
