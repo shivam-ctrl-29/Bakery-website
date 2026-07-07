@@ -3,7 +3,7 @@ import { useScrollReveal } from '../hooks/useScrollReveal'
 
 const contactRows = [
   { mono: '01', label: 'Call',      value: '+91 90399 78297',         href: 'tel:+919039978297' },
-  { mono: '02', label: 'WhatsApp',  value: 'wa.me/919039978297',       href: 'https://wa.me/919039978297' },
+  { mono: '02', label: 'WhatsApp',  value: '+91 90399 78297',          href: 'https://wa.me/919039978297' },
   { mono: '03', label: 'Instagram', value: '@thedarshil19',            href: 'https://instagram.com/thedarshil19' },
   { mono: '04', label: 'Visit',     value: 'AM 240 Sukhliya, Indore',  href: 'https://maps.google.com/?q=Sukhliya,Indore' },
 ]
@@ -137,7 +137,7 @@ export default function Contact() {
           <div style={{ marginTop: 36, position: 'relative', height: 260, overflow: 'hidden', background: '#EDE7DA' }}>
             <iframe
               title="Billmix location"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3679.7!2d75.8577!3d22.7196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjLCsDQzJzEwLjYiTiA3NcKwNTEnMjcuNyJF!5e0!3m2!1sen!2sin!4v1"
+              src="https://maps.google.com/maps?q=Sukhliya%2C+Indore%2C+Madhya+Pradesh+452010&output=embed"
               width="100%" height="100%"
               style={{ border: 0, filter: 'grayscale(60%) sepia(12%) contrast(1.05)' }}
               loading="lazy"
